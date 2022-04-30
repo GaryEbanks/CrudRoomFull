@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.practicaroom.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/Ir_a_listaGenero"
+            app:destination="@id/listaGeneroFragment" />
+        <action
+            android:id="@+id/Ir_a_ListaClasificacion"
+            app:destination="@id/ListaClasificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListaClasificacionFragment"
+        android:name="com.example.practicaroom.fragments.lista.ListaClasificacionFragment"
+        android:label="fragment_view_clasificacion"
+        tools:layout="@layout/fragment_lista_clasificacion" >
+        <action
+            android:id="@+id/add_Clasificacion"
+            app:destination="@id/addClasificacionFragment" />
+        <action
+            android:id="@+id/lista_updateClasificacion"
+            app:destination="@id/updateClasificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClasificacionFragment"
+        android:name="com.example.practicaroom.fragments.agregar.AddClasificacionFragment"
+        android:label="fragment_add_clasificacion"
+        tools:layout="@layout/fragment_add_clasificacion" >
+        <action
+            android:id="@+id/ir_ListaClasificacion"
+            app:destination="@id/ListaClasificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateClasificacionFragment"
+        android:name="com.example.practicaroom.fragments.actualizar.UpdateClasificacionFragment"
+        android:label="fragment_update_clasificacion"
+        tools:layout="@layout/fragment_update_clasificacion" >
+        <action
+            android:id="@+id/update_ListaClasificacion"
+            app:destination="@id/ListaClasificacionFragment" />
+        <argument
+            android:name="currentClasificacion"
+            app:argType="com.example.practicaroom.database.entities.ClasificacionEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaGeneroFragment"
+        android:name="com.example.practicaroom.fragments.lista.ListaGeneroFragment"
+        android:label="fragment_lista_genero"
+        tools:layout="@layout/fragment_lista_genero" >
+        <action
+            android:id="@+id/add_Genero"
+            app:destination="@id/addGeneroFragment" />
+        <action
+            android:id="@+id/lista_updateGenero"
+            app:destination="@id/updateGeneroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGeneroFragment"
+        android:name="com.example.practicaroom.fragments.agregar.AddGeneroFragment"
+        android:label="fragment_add_genero"
+        tools:layout="@layout/fragment_add_genero" >
+        <action
+            android:id="@+id/ir_ListaGenero"
+            app:destination="@id/listaGeneroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateGeneroFragment"
+        android:name="com.example.practicaroom.fragments.actualizar.UpdateGeneroFragment"
+        android:label="fragment_update_genero"
+        tools:layout="@layout/fragment_update_genero" >
+        <action
+            android:id="@+id/update_ListaGenero"
+            app:destination="@id/listaGeneroFragment" />
+        <argument
+            android:name="currentGenero"
+            app:argType="com.example.practicaroom.database.entities.GeneroEntity" />
+    </fragment>
+</navigation>

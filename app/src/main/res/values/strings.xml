@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">practicaRoom</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar_clasificacion">Agregar Clasificacion</string>
+    <string name="ver_clasificacion">Ver Clasificacion</string>
+    <string name="pg">PG</string>
+    <string name="_1">1</string>
+    <string name="contenido_para_toda_la_familia">Contenido para toda la familia</string>
+    <string name="ingresar_abreviacion">Ingresar abreviacion:</string>
+    <string name="abreviacion">Abreviacion</string>
+    <string name="ingresar_nombre">ingresar nombre:</string>
+    <string name="nombre">Nombre</string>
+    <string name="agregar_genero">Agregar genero</string>
+    <string name="clasificacion">Clasificacion</string>
+    <string name="eliminar">Eliminar</string>
+</resources>
